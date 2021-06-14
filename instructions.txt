@@ -6,6 +6,8 @@ Each round starts with a pattern of 4 random coloured lights being displayed on 
 
 Your challenge is to remember this pattern and repeat the exact order and combination to pass on to the next level.
 
+
+
 As you move through the levels, expect to be challenged as the pattern gets longer and the speed increases.
 
 If you fail to complete the sequence in the correct order, the game will end.
