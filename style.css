@@ -1,3 +1,71 @@
+body {
+    font-size: 62.5%;
+    background-image: url("gameboy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 47px;
+    padding-top: 6px;
+    font-size: 1rem;
+}
+
+main {
+    margin: 8% 18%;
+}
+
+.console {
+    display: flex;
+
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: red;
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+}
+
+.buttons {
+    width: 300px;
+
+}
+
+.instructions-button {
+    position: absolute;
+    bottom: 495px;
+    left: 344px;
+    width: 90px;
+    height: 60px;
+    border-radius: 40%;
+}
+
+.start-button {
+    position: absolute;
+    bottom: 460px;
+    right: 390px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.level {
+    position: absolute;
+    bottom: 630px;
+    right: 595px;
+    color: red;
+    font-size: 1.2rem;
+}
+
 .modal {
     position: fixed;
     left: 0;
