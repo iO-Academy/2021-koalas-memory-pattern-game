@@ -20,12 +20,6 @@ function modalEndGame () {
         e.stopPropagation();
         modalEndGame.classList.toggle("blockEndGame")
     }
-
-    window.onclick = function (e) {
-        if (e.target === modalEndGame) {
-            modalEndGame.classList.toggle("blockEndGame");
-        }
-    }
 }
 
 modalEndGame();
