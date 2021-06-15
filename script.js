@@ -24,12 +24,9 @@ function lightUpSquare() {
 function removeLight(random_colour) {
     document.querySelector('#' + random_colour).classList.remove('activated')
 }
-// lightUpSquare()
 
-// Make game start when button is clicked
-// const startGame = document.querySelector('.start-button');
-//
-// startGame.addEventListener('click', e => {
-//     // insert code for randomize pattern sequence
-//     console.log('hello')
-// });
+const startGame = document.querySelector('.start-button');
+
+startGame.addEventListener('click', e => {
+    lightUpSquare()
+});
