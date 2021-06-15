@@ -45,18 +45,46 @@ main {
 
 .red-box {
     background-color: #ff0000;
+    box-shadow: 0 0 0 1px #e32424 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #e32424, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.red-box:active,
+.red-box.activated {
+    box-shadow: 0 0 0 1px #ff8282 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #ff8282;
 }
 
 .green-box {
     background-color: #2cc211;
+    box-shadow: 0 0 0 1px #2cc211 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #638f05, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.green-box:active,
+.green-box.activated {
+    box-shadow: 0 0 0 1px #a0ea00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #a0ea00;
 }
 
 .yellow-box {
     background-color: #ffb900;
+    box-shadow: 0 0 0 1px #ffb900 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c28e07, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.yellow-box:active,
+.yellow-box.activated {
+    box-shadow: 0 0 0 1px #ffea2e inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #ffea2e;
 }
 
 .blue-box {
     background-color: #1140c2;
+    box-shadow: 0 0 0 1px #101e87 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #101e87, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+}
+
+.blue-box:active,
+.blue-box.activated {
+    box-shadow: 0 0 0 1px #7ac5e6 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    background-color: #7ac5e6;
 }
 
 .instructions-button {
