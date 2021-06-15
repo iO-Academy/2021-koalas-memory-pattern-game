@@ -24,4 +24,9 @@ function lightUpSquare() {
 function removeLight(random_colour) {
     document.querySelector('#' + random_colour).classList.remove('activated')
 }
-lightUpSquare()
+
+const startGame = document.querySelector('.start-button');
+
+startGame.addEventListener('click', e => {
+    lightUpSquare()
+});
