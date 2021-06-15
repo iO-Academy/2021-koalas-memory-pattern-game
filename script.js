@@ -10,24 +10,24 @@ closeBtn.addEventListener("click", e => {
     modal.classList.toggle("show-modal")
 });
 
+function modalEndGame () {
+    let modalEndGame = document.querySelector('#endModal')
+    let tile = document.querySelectorAll('.tile')
 
+    tile.forEach(element =>
+        element.addEventListener('click', handleClick)
+    )
 
+    function handleClick(e) {
+        e.stopPropagation();
+        modalEndGame.classList.toggle("blockEndGame")
+    }
 
-
-let modalEndGame = document.querySelector('#endModal')
-let tile = document.querySelectorAll('.tile')
-
-tile.forEach(element =>
-    element.addEventListener('click', handleClick)
-)
-
-function handleClick (e) {
-    e.stopPropagation();
-    modalEndGame.classList.toggle("blockEndGame")
-}
-
-window.onclick = function(e) {
-    if (e.target === modalEndGame) {
-        modalEndGame.classList.toggle("blockEndGame");
+    window.onclick = function (e) {
+        if (e.target === modalEndGame) {
+            modalEndGame.classList.toggle("blockEndGame");
+        }
     }
 }
+
+modalEndGame();
