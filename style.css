@@ -1,0 +1,176 @@
+body {
+    font-size: 62.5%;
+}
+
+header {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
+}
+
+img {
+    width: 1700px;
+    z-index: -1;
+    position: absolute;
+}
+
+main {
+    margin: auto auto;
+    width: 1700px;
+}
+
+.console {
+    width: 1700px;
+    position: relative;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 270px;
+    left: 600px;
+}
+
+.box {
+    width: 160px;
+    height: 150px;
+    margin: 10px 10px 20px 10px;
+}
+
+.red-box {
+    background-color: #ff0000;
+}
+
+.green-box {
+    background-color: #2cc211;
+}
+
+.yellow-box {
+    background-color: #ffb900;
+}
+
+.blue-box {
+    background-color: #1140c2;
+}
+
+.instructions-button {
+    position: absolute;
+    width: 90px;
+    height: 60px;
+    border-radius: 40%;
+    left: 348px;
+    top: 392px;
+}
+
+.start-button {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    left: 1212px;
+    top: 398px;
+}
+
+.level {
+    position: absolute;
+    color: red;
+    font-size: 1.2rem;
+    left: 450px;
+    top: 30px;
+}
+
+.modal {
+    position: relative;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    font-family: 'Roboto', sans-serif;
+    color: #404040;
+}
+
+.modal-content {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D3D3D3FF;
+    padding: 2px 47px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.close-button {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.close-button:hover {
+    background-color: #a3a3a3;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.list-instructions li {
+    line-height: 22px;
+    margin-top: 3.5px;
+}
+
+.list-instructions {
+    margin-left: -20px;
+    font-size: 1rem;
+}
+
+.modalEndGame {
+    display: none;
+    position: relative;
+    z-index: 1;
+    padding-top: 370px;
+    left: 610px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-contentEndGame {
+    font-size: 40px;
+    border: 2px solid black;
+    background-color: #D3D3D3FF;
+    padding: 2px 47px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.blockEndGame {
+    display: block;
+}
+
+.instructions-subtitle {
+    font-size: 1.4rem;
+}
+
