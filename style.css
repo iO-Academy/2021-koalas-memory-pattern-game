@@ -192,6 +192,7 @@ main {
     padding: 2px 47px;
     width: 400px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .blockEndGame {
