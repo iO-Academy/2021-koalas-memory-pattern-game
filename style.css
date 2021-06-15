@@ -12,14 +12,12 @@ header {
     font-size: 1rem;
 }
 
-
 main {
     margin: 8% 18%;
 }
 
 .console {
     display: flex;
-
 }
 
 .display {
@@ -32,13 +30,12 @@ main {
 .box {
     background: red;
     width: 160px;
-    height: 160px;
-    margin: 10px;
+    height: 150px;
+    margin: 10px 10px 20px 10px;
 }
 
 .buttons {
     width: 300px;
-
 }
 
 .instructions-button {
@@ -67,3 +64,189 @@ main {
     font-size: 1.2rem;
 }
 
+/*mmmmmmmooooodaddaaaalll*/
+
+.modal {
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    font-family: 'Roboto', sans-serif;
+    color: #404040;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D3D3D3FF;
+    padding: 2px 47px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.close-button {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 430px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.close-button:hover {
+    background-color: #a3a3a3;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.instructions-subtitle {
+    font-size: 1.4rem;
+}
+
+.list-instructions li {
+    line-height: 22px;
+    margin-top: 3.5px;
+}
+
+.list-instructions {
+    margin-left: -20px;
+    font-size: 1rem;
+}
+
+/*!*buttons*!*/
+
+/*.tile-container {*/
+/*    display: grid;*/
+/*    grid-template-rows: 0.5fr 0.5fr;*/
+/*    grid-template-columns: 0.5fr 0.5fr;*/
+/*    grid-gap: 20px;*/
+/*    margin: auto;*/
+
+/*}*/
+
+/*.tile-red {*/
+/*    background-color: #f25022;*/
+/*    box-shadow: 0 0 0 1px #f25022 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c93a12, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    transition: 0.15s;*/
+/*}*/
+
+/*.tile-red:hover,*/
+/*.tile-red:focus {*/
+/*    background-color: #ff451a;*/
+/*    box-shadow: 0 0 0 1px #FF3000 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #e62b00, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);*/
+/*}*/
+
+/*.tile-red:active,*/
+/*.tile-red.activated {*/
+/*    box-shadow: 0 0 0 1px #ff5c36 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);*/
+/*    background-color: #ff5c36;*/
+/*    transform: translateY(10px);*/
+/*}*/
+
+/*.tile-green {*/
+/*    background-color: #7fba00;*/
+/*    box-shadow: 0 0 0 1px #7fba00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #638f05, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    transition: 0.15s;*/
+/*}*/
+
+/*.tile-green:hover,*/
+/*.tile-green:focus {*/
+/*    background-color: #8cc218;*/
+/*    box-shadow: 0 0 0 1px #8cc218 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #74a802, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6)*/
+/*}*/
+
+/*.tile-green:active,*/
+/*.tile-green.activated {*/
+/*    box-shadow: 0 0 0 1px #a0ea00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);*/
+/*    background-color: #a0ea00;*/
+/*    transform: translateY(10px);*/
+/*}*/
+
+/*.tile-yellow {*/
+/*    background-color: #ffb900;*/
+/*    box-shadow: 0 0 0 1px #ffb900 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c28e07, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    transition: 0.15s;*/
+/*}*/
+
+/*.tile-yellow:hover,*/
+/*.tile-yellow:focus {*/
+/*    background-color: #f8bb19;*/
+/*    box-shadow: 0 0 0 1px #ffb900 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #deb240, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*}*/
+
+/*.tile-yellow:active,*/
+/*.tile-yellow.activated {*/
+/*    box-shadow: 0 0 0 1px #ffca3d inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);*/
+/*    background-color: #ffca3d;*/
+/*    transform: translateY(10px);*/
+/*}*/
+
+/*.tile-blue {*/
+/*    background-color: #00a4ef;*/
+/*    box-shadow: 0 0 0 1px #00a4ef inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #0883bc, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);*/
+/*    transition: 0.15s;*/
+/*}*/
+
+/*.tile-blue:hover,*/
+/*.tile-blue:focus {*/
+/*    background-color: #139ddd;*/
+/*    box-shadow: 0 0 0 1px #139ddd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #0c7cb0, 0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 8px 1px rgba(0, 0, 0, 0.6);*/
+/*}*/
+
+/*.tile-blue:active,*/
+/*.tile-blue.activated {*/
+/*    box-shadow: 0 0 0 1px #2bbcff inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);*/
+/*    background-color: #2bbcff;*/
+/*    transform: translateY(10px);*/
+/*}*/
+
+
+
+/* The Modal (background) */
+.modalEndGame {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Modal Content */
+.modal-contentEndGame {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D3D3D3FF;
+    padding: 2px 47px;
+    width: 400px;
+    border-radius: 8px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.blockEndGame {
+    display: block;
+}
