@@ -24,10 +24,9 @@ function lightUpSquare() {
     setTimeout(() => {
         removeLight(random_colour)
     }, 500)
-
     if (timesRun < 4) {
         timesRun++
-        setTimeout(lightUpSquare, 2000)
+        setTimeout(lightUpSquare, 1000)
     } else {
         playerTurn()
     }
@@ -47,7 +46,6 @@ startGame.addEventListener('click', e => {
 function playerTurn() {
     document.querySelectorAll('.box').forEach(element => {
         element.addEventListener('click', e => {
-            e.stopPropagation()
             if (e.target.id !== colorPattern[0]) {
                 modalEndGame()
             } else {
