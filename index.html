@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Game</title>
 </head>
 <body>
 <main>
-    <header>
-        <h1>NAME OF THE GAME</h1>
-    </header>
     <div class="console">
+        <header>
+            <h1>Koala’s Simon Game</h1>
+        </header>
+        <img src="gameboy.png">
         <div class="buttons">
             <button class="instructions-button trigger">INSTRUCTIONS</button>
             <div class="modal">
@@ -34,13 +35,13 @@
                 </div>
             </div>
         </div>
-            <div class="display tile-container js-container unclickable">
-                <div class="box tile tile-red" data-tile="red"></div>
-                <div class="box tile tile-green" data-tile="green"></div>
-                <div class="box tile tile-blue" data-tile="blue"></div>
-                <div class="box tile tile-yellow" data-tile="yellow"></div>
-            </div>
-        <div class="level"> LVL 1</div>
+        <div class="display">
+            <div class="box red-box"></div>
+            <div class="box blue-box"></div>
+            <div class="box green-box"></div>
+            <div class="box yellow-box"></div>
+            <div class="level">LVL 1</div>
+        </div>
         <div class="buttons">
             <button class="start-button">START</button>
         </div>

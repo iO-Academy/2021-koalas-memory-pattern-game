@@ -1,18 +1,16 @@
-let trigger = document.querySelector('.trigger');
-let modal = document.querySelector('.modal')
-let closeBtn = document.querySelector('.close-button')
+const modal = document.querySelector(".modal");
 
-trigger.addEventListener("click", e => {
+document.querySelector(".trigger").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
 
-closeBtn.addEventListener("click", e => {
-    modal.classList.toggle("show-modal")
+document.querySelector(".close-button").addEventListener("click", e => {
+    modal.classList.toggle("show-modal");
 });
 
 function modalEndGame () {
     let modalEndGame = document.querySelector('#endModal')
-    let tile = document.querySelectorAll('.tile')
+    let tile = document.querySelectorAll('.box')
 
     tile.forEach(element =>
         element.addEventListener('click', handleClick)
