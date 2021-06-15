@@ -1,3 +1,13 @@
+const modal = document.querySelector(".modal");
+
+document.querySelector(".trigger").addEventListener("click", e => {
+    modal.classList.toggle("show-modal");
+});
+
+document.querySelector(".close-button").addEventListener("click", e => {
+    modal.classList.toggle("show-modal");
+});
+
 let timesRun = 1
 function lightUpSquare() {
     let colours = ["blue", "green", "yellow", "red"]
@@ -14,4 +24,4 @@ function lightUpSquare() {
 function removeLight(random_colour) {
     document.querySelector('#' + random_colour).classList.remove('activated')
 }
-// lightUpSquare() <-- add to start button event listener
+lightUpSquare()
