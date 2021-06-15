@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Game</title>
 </head>
 <body>
@@ -15,7 +17,22 @@
     </header>
     <div class="console">
         <div class="buttons">
-            <button class="instructions-button">INSTRUCTIONS</button>
+            <button class="instructions-button trigger">INSTRUCTIONS</button>
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">×</span>
+                    <p class="instructions-subtitle">Are you ready to test your memory?</p>
+                    <ul class="list-instructions">
+                        <li>The game begins when the START button is pressed.</li>
+                        <li>Each round starts with a pattern of 4 random coloured lights being displayed on the screen.</li>
+                        <li>Your challenge is to remember this pattern and repeat the exact order and combination to pass on to
+                            the next level.</li>
+                        <li>As you move through the levels, expect to be challenged as the pattern gets longer and the speed
+                            increases.</li>
+                        <li>If you fail to complete the sequence in the correct order, the game will end.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="display">
             <div class="box"></div>

@@ -12,14 +12,12 @@ header {
     font-size: 1rem;
 }
 
-
 main {
     margin: 8% 18%;
 }
 
 .console {
     display: flex;
-
 }
 
 .display {
@@ -38,7 +36,6 @@ main {
 
 .buttons {
     width: 300px;
-
 }
 
 .instructions-button {
@@ -67,3 +64,66 @@ main {
     font-size: 1.2rem;
 }
 
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 95%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    font-family: 'Roboto', sans-serif;
+    color: #404040;
+    z-index: 200;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D3D3D3FF;
+    padding: 2px 47px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.close-button {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 430px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.close-button:hover {
+    background-color: #a3a3a3;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.list-instructions li {
+    line-height: 22px;
+    margin-top: 3.5px;
+}
+
+.list-instructions {
+    margin-left: -20px;
+    font-size: 1rem;
+}
+
+.instructions-subtitle {
+    font-size: 1.4rem;
+}
