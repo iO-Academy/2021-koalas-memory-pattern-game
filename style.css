@@ -12,6 +12,10 @@ header {
     font-size: 1rem;
 }
 
+.yellow {
+    background: yellow;
+}
+
 main {
     margin: 8% 18%;
 }
