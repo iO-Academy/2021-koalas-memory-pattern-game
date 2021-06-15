@@ -4,32 +4,38 @@ body {
 
 header {
     text-align: center;
-    padding-bottom: 47px;
-    padding-top: 6px;
     font-size: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
 }
 
 img {
     width: 1700px;
-    position: absolute;
     z-index: -1;
-    top: 0px;
-    left: 0px;
+    position: absolute;
 }
 
 main {
-    margin: 8.2% 18%;
+    margin: auto auto;
+    width: 1700px;
+
 }
 
 .console {
-    display: flex;
+    width: 1700px;
+    position: relative;
 }
 
 .display {
     display: flex;
     justify-content: center;
-    width: 550px;
+    width: 500px;
     flex-wrap: wrap;
+    position: absolute;
+    top: 270px;
+    left: 600px;
 }
 
 .box {
@@ -39,34 +45,30 @@ main {
     margin: 10px;
 }
 
-.buttons {
-    width: 300px;
-}
-
 .instructions-button {
     position: absolute;
-    bottom: 489px;
-    left: 348px;
     width: 90px;
     height: 60px;
     border-radius: 40%;
+    left: 348px;
+    top: 392px;
 }
 
 .start-button {
     position: absolute;
-    bottom: 450px;
-    right: 380px;
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    left: 1212px;
+    top: 398px;
 }
 
 .level {
     position: absolute;
-    bottom: 630px;
-    right: 595px;
     color: red;
     font-size: 1.2rem;
+    left: 450px;
+    top: 30px;
 }
 
 .modal {
@@ -86,8 +88,8 @@ main {
 
 .modal-content {
     position: absolute;
-    top: 49%;
-    left: 50%;
+    top: 450px;
+    left: 850px;
     transform: translate(-50%, -50%);
     background-color: #D3D3D3FF;
     padding: 2px 47px;
