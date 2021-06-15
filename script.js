@@ -10,6 +10,10 @@ closeBtn.addEventListener("click", e => {
     modal.classList.toggle("show-modal")
 });
 
+
+
+
+
 let modalEndGame = document.querySelector('#endModal')
 let tile = document.querySelectorAll('.tile')
 
