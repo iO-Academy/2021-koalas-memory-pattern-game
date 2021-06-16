@@ -1,16 +1,18 @@
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal")
 const display = document.querySelector('.display')
 let colorPattern = []
 let timesRun = 1
+let level = 1
+let counter = 0
+let speedTime = 1000
+let speedOfUnchanging = 500
 
 document.querySelector(".trigger").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
-
 document.querySelector(".close-button").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
-
 document.querySelector('.start-button').addEventListener('click', e => {
     lightUpRandomSquare()
     display.classList.remove('unclickable');
@@ -28,10 +30,10 @@ function lightUpRandomSquare() {
     display.classList.add('unclickable');
     setTimeout(() => {
         removeLight(random_colour)
-    }, 500)
+    }, speedOfUnchanging)
     if (timesRun < 4) {
         timesRun++
-        setTimeout(lightUpRandomSquare, 1000)
+        setTimeout(lightUpRandomSquare, speedTime)
     } else {
         display.classList.remove('unclickable');
         playerTurn()
@@ -50,8 +52,24 @@ function playerTurn() {
 
 function removeEventListener() {
     document.querySelectorAll('.box').forEach(element => {
-        element.removeEventListener('click',  boxClick)
+        element.removeEventListener('click', boxClick)
     })
+}
+
+function levelIncrease() {
+    level++
+    if (level !== 1 && level % 2 !== 0) {
+        counter++
+    }
+    speedIncrease()
+    timesRun -= counter
+}
+
+function speedIncrease() {
+    if (speedTime > 200 && level % 4 === 0 && speedOfUnchanging > 100) {
+        speedOfUnchanging -= 50
+        speedTime -= 100
+    }
 }
 
 function boxClick(e) {
@@ -61,8 +79,18 @@ function boxClick(e) {
         colorPattern.shift()
         if (colorPattern.length === 0) {
             timesRun = 1
+            levelIncrease()
             removeEventListener()
             setTimeout(lightUpRandomSquare, 2000)
         }
     }
+}
+
+document.querySelector('.restartButton').addEventListener("click", restart => {
+    location.reload()
+    console.log(restart)
+})
+
+function restart() {
+    location.reload();
 }
