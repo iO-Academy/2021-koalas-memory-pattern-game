@@ -32,7 +32,7 @@ function lightUpRandomSquare() {
     }, 500)
     if (timesRun < 4) {
         timesRun++
-        setTimeout(lightUpRandomSquare, 1000)
+        setTimeout(lightUpRandomSquare, speedTime)
     } else {
         display.classList.remove('unclickable');
         playerTurn()
