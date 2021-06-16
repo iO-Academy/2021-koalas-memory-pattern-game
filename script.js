@@ -35,7 +35,6 @@ function lightUpRandomSquare() {
         setTimeout(lightUpRandomSquare, 1000)
     } else {
         display.classList.remove('unclickable');
-        console.log(colorPattern)
         playerTurn()
     }
 }
@@ -62,7 +61,6 @@ function speedLvl() {
         speedTime = minimumSpeed;
     } else if (level % 4 === 0) {
         speedTime -= 100;
-        console.log(speedTime)
     }
 }
 
@@ -79,8 +77,6 @@ function boxClick(e) {
             }
             speedLvl()
             timesRun = timesRun - counter
-            console.log(level)
-            console.log(counter)
             removeEventListener()
             setTimeout(lightUpRandomSquare, 2000)
         }
