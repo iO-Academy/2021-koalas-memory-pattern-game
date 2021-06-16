@@ -13,6 +13,7 @@ function modalEndGame () {
         modalEndGame.classList.toggle("blockEndGame")
 }
 
+const display = document.querySelector('.display')
 let colorPattern = []
 let timesRun = 1
 function lightUpSquare() {
@@ -20,6 +21,7 @@ function lightUpSquare() {
     let random_colour = (colours[Math.floor(Math.random()*colours.length)])
     colorPattern.push(random_colour)
     document.querySelector('#' + random_colour).classList.add('activated')
+    display.classList.add('unclickable');
     setTimeout(() => {
         removeLight(random_colour)
     }, 500)
@@ -27,6 +29,7 @@ function lightUpSquare() {
         timesRun++
         setTimeout(lightUpSquare, 1000)
     } else {
+        display.classList.remove('unclickable');
         playerTurn()
     }
 }
@@ -37,8 +40,10 @@ function removeLight(random_colour) {
 
 const startGame = document.querySelector('.start-button');
 
+
 startGame.addEventListener('click', e => {
     lightUpSquare()
+    display.classList.remove('unclickable');
 })
 
 function playerTurn() {

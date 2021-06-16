@@ -41,6 +41,7 @@ main {
     width: 160px;
     height: 150px;
     margin: 10px 10px 20px 10px;
+    cursor: pointer;
 }
 
 .red-box {
@@ -94,6 +95,7 @@ main {
     border-radius: 40%;
     left: 348px;
     top: 392px;
+    cursor: pointer;
 }
 
 .start-button {
@@ -103,6 +105,7 @@ main {
     border-radius: 50%;
     left: 1212px;
     top: 398px;
+    cursor: pointer;
 }
 
 .level {
@@ -201,4 +204,8 @@ main {
 
 .instructions-subtitle {
     font-size: 1.4rem;
+}
+
+.unclickable {
+    pointer-events: none;
 }
