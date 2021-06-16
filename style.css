@@ -209,3 +209,7 @@ main {
 .unclickable {
     pointer-events: none;
 }
+
+.finalScore {
+    font-size: 1.5rem;
+}
