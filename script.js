@@ -8,7 +8,6 @@ document.querySelector(".close-button").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
 
-
 function modalEndGame () {
     let modalEndGame = document.querySelector('#endModal')
         modalEndGame.classList.toggle("blockEndGame")
@@ -42,21 +41,23 @@ startGame.addEventListener('click', e => {
     lightUpSquare()
 })
 
-
 function playerTurn() {
     document.querySelectorAll('.box').forEach(element => {
-        element.addEventListener('click', e => {
-            if (e.target.id !== colorPattern[0]) {
-                modalEndGame()
-            } else {
-                console.log('correct')
-                colorPattern.shift()
-                if (colorPattern.length === 0) {
-                    console.log('you have reach lvl 2')
-                }
-            }
-        })
+        element.addEventListener('click', boxClick)
     })
 }
 
-
+function boxClick(e) {
+    if (e.target.id !== colorPattern[0]) {
+        modalEndGame()
+    } else {
+        colorPattern.shift()
+        if (colorPattern.length === 0) {
+            timesRun = 1
+            document.querySelectorAll('.box').forEach(element => {
+                element.removeEventListener('click',  boxClick)
+            })
+            setTimeout(lightUpSquare, 2000)
+        }
+    }
+}
