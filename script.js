@@ -4,7 +4,7 @@ let colorPattern = []
 let timesRun = 1
 let level = 1
 let counter = 0
-let speedTime = 1000;
+let speedTime = 1000
 
 document.querySelector(".trigger").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
@@ -57,7 +57,7 @@ function removeEventListener() {
 
 function levelIncrease() {
     level++
-    if (level !== 1 && level %2 !== 0) {
+    if (level !== 1 && level % 2 !== 0) {
         counter++
     }
     speedIncrease()
@@ -66,7 +66,7 @@ function levelIncrease() {
 
 function speedIncrease() {
     if (speedTime > 300 && level % 4 === 0) {
-        speedTime -= 100;
+        speedTime -= 100
     }
 }
 
