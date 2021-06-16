@@ -40,7 +40,6 @@ function removeLight(random_colour) {
 
 const startGame = document.querySelector('.start-button');
 
-
 startGame.addEventListener('click', e => {
     lightUpSquare()
     display.classList.remove('unclickable');
