@@ -5,6 +5,7 @@ let timesRun = 1
 let level = 1
 let counter = 0
 let speedTime = 1000
+let speedOfUnchanging = 500
 
 document.querySelector(".trigger").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
@@ -29,7 +30,7 @@ function lightUpRandomSquare() {
     display.classList.add('unclickable');
     setTimeout(() => {
         removeLight(random_colour)
-    }, 500)
+    }, speedOfUnchanging)
     if (timesRun < 4) {
         timesRun++
         setTimeout(lightUpRandomSquare, speedTime)
@@ -65,7 +66,8 @@ function levelIncrease() {
 }
 
 function speedIncrease() {
-    if (speedTime > 300 && level % 4 === 0) {
+    if (speedTime > 200 && level % 4 === 0 && speedOfUnchanging > 100) {
+        speedOfUnchanging -= 50
         speedTime -= 100
     }
 }
