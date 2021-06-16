@@ -90,6 +90,7 @@ document.querySelector('.restartButton').addEventListener("click", restart => {
     location.reload()
     console.log(restart)
 })
+
 function restart() {
     location.reload();
 }
