@@ -20,7 +20,7 @@ document.querySelector('.start-button').addEventListener('click', e => {
 
 function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
-        document.querySelector('.finalScore').innerHTML = 'You have managed to reach level ' + level
+        document.querySelector('.finalScore').innerText = 'You have managed to reach level ' + level
 }
 
 function lightUpRandomSquare() {
