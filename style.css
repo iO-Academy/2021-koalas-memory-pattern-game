@@ -108,6 +108,17 @@ main {
     cursor: pointer;
 }
 
+.restartButton {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    margin-left: 602px;
+    top: -107.5px;
+    cursor: pointer;
+    line-height: 16px;
+}
+
 .level {
     position: absolute;
     color: red;
