@@ -1,4 +1,4 @@
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal")
 const display = document.querySelector('.display')
 let colorPattern = []
 let timesRun = 1
@@ -55,11 +55,17 @@ function removeEventListener() {
     })
 }
 
-function speedLvl() {
-    let minimumSpeed = 300;
-    if (speedTime === 300) {
-        speedTime = minimumSpeed;
-    } else if (level % 4 === 0) {
+function levelIncrease() {
+    level++
+    if (level !== 1 && level %2 !== 0) {
+        counter++
+    }
+    speedIncrease()
+    timesRun -= counter
+}
+
+function speedIncrease() {
+    if (speedTime > 300 && level % 4 === 0) {
         speedTime -= 100;
     }
 }
@@ -71,12 +77,7 @@ function boxClick(e) {
         colorPattern.shift()
         if (colorPattern.length === 0) {
             timesRun = 1
-            level++
-            if (level !== 1 && level %2 !== 0) {
-                counter++
-            }
-            speedLvl()
-            timesRun = timesRun - counter
+            levelIncrease()
             removeEventListener()
             setTimeout(lightUpRandomSquare, 2000)
         }
