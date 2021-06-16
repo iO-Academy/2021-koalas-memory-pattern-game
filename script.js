@@ -20,6 +20,7 @@ document.querySelector('.start-button').addEventListener('click', e => {
 
 function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
+        document.querySelector('.finalScore').innerText = 'You have managed to reach level ' + level
 }
 
 function lightUpRandomSquare() {
@@ -58,7 +59,7 @@ function removeEventListener() {
 
 function levelIncrease() {
     level++
-    document.querySelector('.level').innerHTML = 'LVL ' + level
+    document.querySelector('.level').innerText = 'LVL ' + level
     if (level !== 1 && level % 2 !== 0) {
         counter++
     }
