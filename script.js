@@ -15,6 +15,7 @@ let colorPattern = []
 let timesRun = 1
 let level = 1
 let counter = 0
+let speedTime = 1000;
 function lightUpSquare() {
     let colours = ["blue", "green", "yellow", "red"]
     let random_colour = (colours[Math.floor(Math.random()*colours.length)])
@@ -26,7 +27,7 @@ function lightUpSquare() {
     }, 500)
     if (timesRun < 4) {
         timesRun++
-        setTimeout(lightUpSquare, 1000)
+        setTimeout(lightUpSquare, speedTime)
     } else {
         // display.classList.remove('unclickable');
         console.log(colorPattern)
@@ -57,6 +58,7 @@ function boxClick(e) {
             if (level !== 1 && level %2 !== 0) {
                 counter++
             }
+            speedLvl()
             timesRun = timesRun - counter
             console.log(level)
             console.log(counter)
@@ -65,6 +67,17 @@ function boxClick(e) {
             })
             setTimeout(lightUpSquare, 2000)
         }
+    }
+}
+
+
+function speedLvl() {
+    let minimumSpeed = 300;
+    if (speedTime === 300) {
+        speedTime = minimumSpeed;
+    } else if (level % 4 === 0) {
+        speedTime -= 100;
+        console.log(speedTime)
     }
 }
 
