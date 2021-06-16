@@ -8,13 +8,14 @@ document.querySelector(".close-button").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
 
-function toggleEndGameModal () {
+function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
 }
 
 const display = document.querySelector('.display')
 let colorPattern = []
 let timesRun = 1
+
 function lightUpRandomSquare() {
     const colours = ["blue", "green", "yellow", "red"]
     const random_colour = (colours[Math.floor(Math.random()*colours.length)])
@@ -48,14 +49,10 @@ function playerTurn() {
     })
 }
 
-function removeEventListener () {
-    if (colorPattern.length === 0) {
-        timesRun = 1
-        document.querySelectorAll('.box').forEach(element => {
-            element.removeEventListener('click',  boxClick)
-        })
-        setTimeout(lightUpRandomSquare, 1000)
-    }
+function removeEventListener() {
+    document.querySelectorAll('.box').forEach(element => {
+        element.removeEventListener('click',  boxClick)
+    })
 }
 
 function boxClick(e) {
@@ -63,6 +60,10 @@ function boxClick(e) {
         toggleEndGameModal()
     } else {
         colorPattern.shift()
-        removeEventListener()
+        if (colorPattern.length === 0) {
+            timesRun = 1
+            removeEventListener()
+            setTimeout(lightUpRandomSquare, 2000)
+        }
     }
 }
