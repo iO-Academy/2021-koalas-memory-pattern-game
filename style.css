@@ -176,7 +176,7 @@ main {
     font-size: 1rem;
 }
 
-.modalEndGame {
+.showModalEndGame {
     display: none;
     position: relative;
     z-index: 1;
@@ -198,7 +198,7 @@ main {
     text-align: center;
 }
 
-.blockEndGame {
+.showEndGameModal {
     display: block;
 }
 
