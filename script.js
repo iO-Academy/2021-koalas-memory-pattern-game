@@ -1,4 +1,3 @@
-
 const modal = document.querySelector(".modal");
 const display = document.querySelector('.display')
 let colorPattern = []
@@ -13,7 +12,6 @@ document.querySelector(".trigger").addEventListener("click", e => {
 document.querySelector(".close-button").addEventListener("click", e => {
     modal.classList.toggle("show-modal");
 });
-
 document.querySelector('.start-button').addEventListener('click', e => {
     lightUpRandomSquare()
     display.classList.remove('unclickable');
@@ -41,10 +39,10 @@ function lightUpRandomSquare() {
         playerTurn()
     }
 }
+
 function removeLight(random_colour) {
     document.querySelector('#' + random_colour).classList.remove('activated')
 }
-
 
 function playerTurn() {
     document.querySelectorAll('.box').forEach(element => {
