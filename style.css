@@ -109,11 +109,12 @@ main {
 }
 
 .restartButton {
+    z-index: 1;
     position: relative;
     width: 92px;
     height: 92px;
     border-radius: 50%;
-    margin-left: 602px;
+    margin-left: 1212px;
     top: -158.5px;
     cursor: pointer;
     line-height: 16px;
@@ -194,7 +195,7 @@ main {
     padding-top: 370px;
     left: 610px;
     top: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
     overflow: auto;
 }
