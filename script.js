@@ -20,13 +20,14 @@ document.querySelector('.start-button').addEventListener('click', e => {
 document.querySelector('.restartButton').addEventListener("click", (element) => {
     toggleEndGameModal()
     restartGame()
-    document.querySelector('.level').innerText = 'LVL ' + level
+    displayLevel()
     setTimeout(lightUpRandomSquare, 2000)
 })
 
 function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
         document.querySelector('.finalScore').innerText = 'You have managed to reach level ' + level
+        document.querySelector('.restartButton').classList.toggle("showEndGameModal")
 }
 
 function lightUpRandomSquare() {
@@ -65,7 +66,7 @@ function removeEventListener() {
 
 function levelIncrease() {
     level++
-    document.querySelector('.level').innerText = 'LVL ' + level
+    displayLevel()
     if (level !== 1 && level % 2 !== 0) {
         counter++
     }
@@ -92,6 +93,10 @@ function boxClick(e) {
             setTimeout(lightUpRandomSquare, 2000)
         }
     }
+}
+
+function displayLevel() {
+    document.querySelector('.level').innerText = 'LVL ' + level
 }
 
 function resetVariables() {
