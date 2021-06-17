@@ -17,6 +17,12 @@ document.querySelector('.start-button').addEventListener('click', e => {
     lightUpRandomSquare()
     display.classList.remove('unclickable');
 })
+document.querySelector('.restartButton').addEventListener("click", (element) => {
+    toggleEndGameModal()
+    restartGame()
+    document.querySelector('.level').innerText = 'LVL ' + level
+    setTimeout(lightUpRandomSquare, 2000)
+})
 
 function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
@@ -101,10 +107,3 @@ function restartGame() {
     removeEventListener()
     resetVariables()
 }
-
-document.querySelector('.restartButton').addEventListener("click", (element) => {
-    toggleEndGameModal()
-    restartGame()
-    document.querySelector('.level').innerText = 'LVL ' + level
-    setTimeout(lightUpRandomSquare, 2000)
-})
