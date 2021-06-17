@@ -88,11 +88,23 @@ function boxClick(e) {
     }
 }
 
-document.querySelector('.restartButton').addEventListener("click", restart => {
-    location.reload()
-    console.log(restart)
-})
-
-function restart() {
-    location.reload();
+function resetVariables() {
+    colorPattern = []
+    timesRun = 1
+    level = 1
+    counter = 0
+    speedTime = 1000
+    speedOfUnchanging = 500
 }
+
+function restartGame() {
+    removeEventListener()
+    resetVariables()
+}
+
+document.querySelector('.restartButton').addEventListener("click", (element) => {
+    toggleEndGameModal()
+    restartGame()
+    document.querySelector('.level').innerText = 'LVL ' + level
+    setTimeout(lightUpRandomSquare, 2000)
+})
