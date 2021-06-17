@@ -17,9 +17,16 @@ document.querySelector('.start-button').addEventListener('click', e => {
     lightUpRandomSquare()
     display.classList.remove('unclickable');
 })
+document.querySelector('.restartButton').addEventListener("click", (element) => {
+    toggleEndGameModal()
+    restartGame()
+    document.querySelector('.level').innerText = 'LVL ' + level
+    setTimeout(lightUpRandomSquare, 2000)
+})
 
 function toggleEndGameModal() {
         document.querySelector('#endModal').classList.toggle("showEndGameModal")
+        document.querySelector('.finalScore').innerText = 'You have managed to reach level ' + level
 }
 
 function lightUpRandomSquare() {
@@ -58,7 +65,7 @@ function removeEventListener() {
 
 function levelIncrease() {
     level++
-    document.querySelector('.level').innerHTML = 'LVL ' + level
+    document.querySelector('.level').innerText = 'LVL ' + level
     if (level !== 1 && level % 2 !== 0) {
         counter++
     }
@@ -87,11 +94,16 @@ function boxClick(e) {
     }
 }
 
-document.querySelector('.restartButton').addEventListener("click", restart => {
-    location.reload()
-    console.log(restart)
-})
+function resetVariables() {
+    colorPattern = []
+    timesRun = 1
+    level = 1
+    counter = 0
+    speedTime = 1000
+    speedOfUnchanging = 500
+}
 
-function restart() {
-    location.reload();
+function restartGame() {
+    removeEventListener()
+    resetVariables()
 }
