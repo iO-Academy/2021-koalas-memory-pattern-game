@@ -1,2 +1,5 @@
 # 2021-koalas-memory-pattern-game
-Project 3 - Js Game
+JavaScript Game
+
+## Live version
+https://dev.io-academy.uk/projects/2021-may/memory-game/
